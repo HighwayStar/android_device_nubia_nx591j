@@ -21,12 +21,19 @@ DEVICE_PATH := device/nubia/nx591j
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 
+# CMHW
+BOARD_HARDWARE_CLASS += \
+    $(DEVICE_PATH)/cmhw
+
 # Kernel
 TARGET_KERNEL_CONFIG := lineageos_nx591j_defconfig
 
 # Partitions
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 4831838208
 BOARD_USERDATAIMAGE_PARTITION_SIZE := 56428567552
+
+# Power
+TARGET_TAP_TO_WAKE_NODE := "/sys/class/input/input2/wake_gesture"
 
 # Sepolicy
 BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
