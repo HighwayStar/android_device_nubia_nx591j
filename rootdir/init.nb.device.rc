@@ -1,0 +1,10 @@
+# Copyright (c) 2016, nubia. All rights reserved.
+#
+# init.nb.rc
+# For all nubia projects defined in device/zte
+
+import import init.nb.device.rc
+
+on boot
+    mkdir /dev/fpcSocket 0770 system system
+    chmod -R 0777 /dev/fpcSocket

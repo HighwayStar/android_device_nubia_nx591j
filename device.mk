@@ -25,5 +25,9 @@ PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/audio/audio_platform_info_extcodec.xml:system/etc/audio_platform_info_extcodec.xml \
     $(LOCAL_PATH)/audio/audio_platform_info.xml:system/etc/audio_platform_info.xml
 
+# Ramdisk nubia specific
+PRODUCT_PACKAGES += \
+    init.nb.device.rc
+
 # Inherit from msm8956-common
 $(call inherit-product, device/nubia/msm8976-common/msm8976.mk)
